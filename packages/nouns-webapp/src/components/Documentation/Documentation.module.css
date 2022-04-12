@@ -8,7 +8,7 @@
 }
 
 .headerWrapper h1 {
-  font-family: New York;
+  font-family: Cypher;
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
@@ -21,6 +21,7 @@
 
 .headerWrapper p {
   font-family: NewYork;
+  -webkit-text-stroke-width: 0.5px;
   font-style: normal;
   font-weight: 400;
   -webkit-text-stroke: 2;

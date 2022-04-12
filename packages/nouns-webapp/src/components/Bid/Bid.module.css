@@ -16,7 +16,7 @@
   height: 3rem;
   color: white;
   border: transparent;
-  background-color: var(--brand-black);
+  background-color: #4E4AFF;
   font-weight: bold;
   letter-spacing: normal;
   font-size: 19px;
@@ -94,7 +94,7 @@
   background-color: white; */
   outline: none !important;
   box-shadow: none !important;
-  font-family: 'Armata';
+  font-family: 'New York';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -108,7 +108,7 @@
 
 .customPlaceholder {
   color: var(--brand-cool-light-text);
-  font-family: 'PT Root UI';
+  font-family: 'New York';
   font-weight: bold;
   z-index: 3;
   user-select: none;
@@ -120,7 +120,7 @@
   top: 15%;
   left: 3%;
   color: var(--brand-cool-light-text);
-  font-family: 'PT Root UI';
+  font-family: 'New York';
   font-weight: bold;
   font-size: 25px;
   z-index: 1;
@@ -147,7 +147,7 @@
   border: transparent;
   background-color: var(--brand-black);
   font-weight: bold;
-  font-family: 'PT Root UI';
+  font-family: 'New York';
   font-size: 18px;
   border-radius: 10px;
 }

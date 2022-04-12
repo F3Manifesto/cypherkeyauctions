@@ -20,6 +20,8 @@
   align-items: center;
   padding: 0.5rem 0;
   justify-content: space-between;
+  font-family: New York;
+  -webkit-text-stroke-width: 0.5px;
 }
 
 .leftSectionWrapper {

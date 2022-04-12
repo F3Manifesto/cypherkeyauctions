@@ -3,7 +3,8 @@
   color: var(--brand-cool-dark-text);
   background-color: var(--brand-cool-accent);
   border-radius: 10px;
-  font-family: 'PT Root UI';
+  font-family: 'New York';
+  -webkit-text-stroke-width: 0.5px;
   font-weight: bold;
   cursor: pointer;
   vertical-align: middle;

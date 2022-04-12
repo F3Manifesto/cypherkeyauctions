@@ -46,8 +46,8 @@
   background-repeat: no-repeat;
   font-size: large;
   border-radius: 50%;
-  color: white;
-  background-color: #4E4AFF;
+  color: #4E4AFF;
+  background-color: #FFEF62;
   font-weight: bold;
 }
 
@@ -62,8 +62,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   font-size: large;
-  color: white;
-  background-color: #4E4AFF;
+  color: #4E4AFF;
+  background-color: #FFEF62;
   border-radius: 50%;
   font-weight: bold;
 }
@@ -76,7 +76,7 @@ buttons looking disabled when they were not */
   .rightArrowWarm:hover,
   .rightArrowCool:hover {
     opacity: 0.9;
-    background-color: var(--brand-gray-hover);
+    background-color: black;
   }
 }
 

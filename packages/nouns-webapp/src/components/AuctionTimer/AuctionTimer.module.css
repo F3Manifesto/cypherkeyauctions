@@ -1,11 +1,12 @@
 .section span {
   font-size: 3rem;
   font-weight: bold;
-  font-family: 'Londrina Solid';
+  font-family: 'New York';
 }
 
 .section h4 {
   font-family: New York;
+  -webkit-text-stroke-width: 0.5px;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -17,6 +18,7 @@
 
 .section h2 {
   font-family: New York;
+  -webkit-text-stroke-width: 0.5px;
   font-style: normal;
   font-weight: normal;
   font-size: 1.5vw;
@@ -43,6 +45,7 @@
 
 .timerSection span {
   font-family: New York;
+  -webkit-text-stroke-width: 0.5px;
   font-style: normal;
   font-weight: normal;
   font-size: 1.5vw;
@@ -57,6 +60,7 @@
 
 .timerSectionFinal span {
   font-family: New York;
+  -webkit-text-stroke-width: 05.px;
   font-style: normal;
   font-weight: normal;
   font-size: 1.5vw;

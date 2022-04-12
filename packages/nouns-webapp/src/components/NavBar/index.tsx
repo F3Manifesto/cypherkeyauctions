@@ -42,7 +42,7 @@ const NavBar = () => {
         <Container fluid={'xxl'}>
           <div className={classes.brandAndTreasuryWrapper}>
             <Navbar.Brand as={Link} to="/">
-              <h1 className={classes.logo}> CC:0 </h1>
+              <h1 className={classes.logo}> F3M </h1>
             </Navbar.Brand>
           </div>
           <Navbar.Toggle className={classes.navBarToggle} aria-controls="basic-navbar-nav" />

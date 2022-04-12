@@ -1,5 +1,6 @@
 .date {
   font-family: New York;
+  -webkit-text-stroke-width: 0.5px;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;

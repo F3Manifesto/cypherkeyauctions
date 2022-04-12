@@ -23,7 +23,7 @@ const Footer = () => {
             </a>
             <a href="https://www.youtube.com/channel/UC5SOYiDrdooqNusoS5vrJAw" target="_blank" rel="noreferrer">
               <img
-                src="./public/youtube-icon.png"
+                src="/public/youtube-icon.png"
                 alt="youtube-icon"
                 className={styles.youtubeIcon}
               />

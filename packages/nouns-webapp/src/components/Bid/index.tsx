@@ -45,7 +45,7 @@ const currentBid = (bidInputRef: React.RefObject<HTMLInputElement>) => {
   return new BigNumber(utils.parseEther(bidInputRef.current.value).toString());
 };
 
-const cc0TokenAddress = '0x91dbd2951310e887940c29d9828556086a52c54a';
+const cc0TokenAddress = '0x14a59458aa3a9355f4b520114a85a24fca2a5622';
 
 const Bid: React.FC<{
   auction: Auction;

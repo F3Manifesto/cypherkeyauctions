@@ -17,7 +17,7 @@ const TruncatedAmount: React.FC<{ amount: BigNumber; isEthereum?: boolean }> = p
     <>
       {isMobile ? (
         <>
-          {`${monaValue}`} {isEthereum ? 'MONA' : 'CC0'}
+          {`${monaValue}`} {isEthereum ? 'MONA' : 'F3M'}
         </>
       ) : (
         <>
@@ -26,7 +26,7 @@ const TruncatedAmount: React.FC<{ amount: BigNumber; isEthereum?: boolean }> = p
               {`${ethValue}`} ETH ({`${monaValue}`} MONA)
             </>
           ) : (
-            <>{monaValue} CCO</>
+            <>{monaValue} F3M</>
           )}
         </>
       )}
