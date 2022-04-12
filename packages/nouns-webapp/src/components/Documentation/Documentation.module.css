@@ -8,29 +8,30 @@
 }
 
 .headerWrapper h1 {
-  font-family: Armata;
+  font-family: New York;
   font-style: normal;
-  font-weight: bold;
-  font-size: 3vw;
-  line-height: 4vw;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 61px;
   display: flex;
   align-items: center;
 
-  color: #ffffff;
+  color: white;
 }
 
 .headerWrapper p {
-  font-family: Armata;
+  font-family: NewYork;
   font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 2vw;
-
-  color: #ffffff;
+  font-weight: 400;
+  -webkit-text-stroke: 2;
+  font-size: 20px;
+  line-height: 30px;
+  
+  color: white;
 }
 
 .accordionItem {
-  font-family: 'PT Root UI', sans-serif;
+  font-family: 'NewYork', sans-serif;
   font-weight: 500;
   letter-spacing: -0.25px;
   line-height: 28px;
@@ -58,7 +59,7 @@
 .accordionHeader button {
   border: none;
   background-color: transparent;
-  font-family: 'Londrina Solid';
+  font-family: 'New York';
   font-size: 2.5rem !important;
   cursor: pointer;
   line-height: normal;

@@ -13,8 +13,8 @@
   background-repeat: no-repeat;
   font-size: large;
   border-radius: 50%;
-  color: black;
-  background-color: #11808f;
+  color: #FFEF62;
+  background-color: #4E4AFF;
   font-weight: bold;
 }
 
@@ -29,8 +29,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   font-size: large;
-  color: black;
-  background-color: #11808f;
+  color: #FFEF62;
+  background-color: #4E4AFF;
   border-radius: 50%;
   font-weight: bold;
 }
@@ -46,8 +46,8 @@
   background-repeat: no-repeat;
   font-size: large;
   border-radius: 50%;
-  color: #1ee4ff;
-  background-color: black;
+  color: white;
+  background-color: #4E4AFF;
   font-weight: bold;
 }
 
@@ -62,8 +62,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   font-size: large;
-  color: #1ee4ff;
-  background-color: black;
+  color: white;
+  background-color: #4E4AFF;
   border-radius: 50%;
   font-weight: bold;
 }

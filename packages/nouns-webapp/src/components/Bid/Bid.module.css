@@ -24,19 +24,19 @@
 }
 
 .formCheck label {
-  font-family: Armata;
+  font-family: Cypher;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 19px;
   display: flex;
   margin: 0 !important;
-  color: rgb(30, 228, 255);
+  color: #4E4AFF
 }
 
 .formCheck input:checked {
-  background-color: rgb(30, 228, 255);
-  border-color: rgb(30, 228, 255);
+  background-color: #4E4AFF
+  /*border-color: #4E4AFF;*/
 }
 
 .polygonFormCheck label {

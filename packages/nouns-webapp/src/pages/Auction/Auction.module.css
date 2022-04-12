@@ -13,21 +13,21 @@
 
 .polygonWrapper .loader svg path,
 svg rect {
-  fill: black !important;
+  fill: #FFEF62 !important;
 }
 
 .loader svg path,
 svg rect {
-  fill: rgb(30, 228, 255);
+  fill: #4E4AFF;
 }
 
 .loadingWrapper {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background: black;
+  background: #FFEF62;
 }
 
 .polygonWrapper {
-  background: #1ee4ff;
+  background: #4E4AFF;
 }

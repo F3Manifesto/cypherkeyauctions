@@ -56,7 +56,7 @@ const Bid: React.FC<{
   const { library, chainId } = useEthers();
   let { auction, auctionEnded, isEthereum } = props;
   const reduxChainId = useAppSelector(state => state.application.chainId);
-  const [paymentOption, setPaymentOption] = useState<string>(isEthereum ? 'ETH' : 'CC0');
+  const [paymentOption, setPaymentOption] = useState<string>(isEthereum ? 'ETH' : 'F3M');
   const currentConfig = getCurrentConfig(reduxChainId?.toString());
 
   const nounsAuctionHouseContract = new NounsAuctionHouseFactory().attach(
@@ -351,7 +351,7 @@ const Bid: React.FC<{
     placeBidState.status === 'Mining' || settleAuctionState.status === 'Mining' || !activeAccount;
 
   const minBidCopy = `${minBidEth(minBid, paymentOption)} ${
-    isEthereum ? paymentOption : 'CC0'
+    isEthereum ? paymentOption : 'F3M'
   } or more`;
   const fomoNounsBtnOnClickHandler = () => {
     // Open Fomo Nouns in a new tab

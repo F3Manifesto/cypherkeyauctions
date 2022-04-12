@@ -1,36 +1,67 @@
-import classes from './Footer.module.css';
-import { Container } from 'react-bootstrap';
-import { externalURL, ExternalURL } from '../../utils/externalURL';
-import Link from '../Link';
+import styles from './Footer.module.css'
 
 const Footer = () => {
-  const twitterURL = externalURL(ExternalURL.twitter);
-  const discordURL = externalURL(ExternalURL.discord);
-  const githubURL = externalURL(ExternalURL.github);
-  const documentationURL = externalURL(ExternalURL.documentation);
-  const mediumURL = externalURL(ExternalURL.medium);
-  const mirrorURL = externalURL(ExternalURL.mirror);
-
   return (
-    <div className={classes.wrapper}>
-      <Container fluid={'xxl'} className={classes.container}>
-        <div className={classes.topBar}>
-          <div className={classes.logo}>CC:0</div>
-          <div className={classes.description}>
-            This DAO exists to accelerate the entire creative world to the long overdue, very near
-            future when control over creative works no longer ruin so many lives.
+    <footer className={styles.footer}>
+      <div className={styles.footerWrapper}>
+        <div className={styles.textLogo}>
+          <img className={styles.imageLogo} src='/public/logoBig.png' alt='logo_big' />
+        </div>
+        
+        <div className={styles.centerWrapper}>
+          <div className={styles.description}>
+            Reach out across any of our social media channels to get more involved with the manifesto, cc0 web3 fashion & the open metaverse. ALL ENGINEERING AND ARCHITECTURE IS FORKED FROM THE DIGITALAX OPEN SOURCE PROTOCOL STACK.
+          </div>
+
+          <div className={[styles.dFlex, styles.iconsLine].join(' ')}>
+            <a href="https://www.tiktok.com/@f3manifesto" target="_blank" rel="noreferrer">
+              <img
+                src="./public/mirror.png"
+                alt="tiktok-icon"
+                className={styles.tiktokIcon}
+              />
+            </a>
+            <a href="https://www.youtube.com/channel/UC5SOYiDrdooqNusoS5vrJAw" target="_blank" rel="noreferrer">
+              <img
+                src="./public/youtube-icon.png"
+                alt="youtube-icon"
+                className={styles.youtubeIcon}
+              />
+            </a>
+            <a href="https://f3manifesto.medium.com/" target="_blank" rel="noreferrer">
+              <img
+                src="./public/medium-icon.png"
+                alt="medium-icon"
+                className={styles.mediumIcon}
+              />
+            </a>
+            <a href="https://mirror.xyz/f3manifesto.eth" target="_blank" rel="noreferrer">
+              <img
+                src="./public/mirror.png"
+                alt="mirror-icon"
+                className={styles.mirrorIcon}
+              />
+            </a>
+            <a href="https://twitter.com/f3manifesto" target="_blank" rel="noreferrer">
+              <img
+                src="./public/twitter-icon.png"
+                alt="twitter-icon"
+                className={styles.twitterIcon}
+              /> 
+            </a>
+            <a href="https://docs.f3manifesto.xyz/" target="_blank" rel="noreferrer">
+              <img
+                src="./public/gitbook.png"
+                alt="gitbook-icon"
+                className={styles.gitbookIcon}
+              /> 
+            </a>
           </div>
         </div>
-        <footer className={classes.footerSignature}>
-          <Link text="Twitter" url={twitterURL} leavesPage={true} />
-          <Link text="Discord" url={discordURL} leavesPage={true} />
-          <Link text="Github" url={githubURL} leavesPage={true} />
-          <Link text="Documentation" url={documentationURL} leavesPage={true} />
-          <Link text="Medium" url={mediumURL} leavesPage={true} />
-          <Link text="Mirror" url={mirrorURL} leavesPage={false} />
-        </footer>
-      </Container>
-    </div>
-  );
-};
-export default Footer;
+      </div>
+    </footer>
+  )
+}
+
+export default Footer
+

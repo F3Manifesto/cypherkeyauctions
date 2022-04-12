@@ -19,17 +19,17 @@
 }
 
 .title {
-  font-family: Armata;
+  font-family: Cypher;
   font-style: normal;
-  font-weight: normal;
-  font-size: 4.5vw;
-  line-height: 5vw;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 96px;
   margin-bottom: 4vw;
   display: flex;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
-  color: #1ee4ff;
+  color: #4E4AFF;
 }
 
 @media (max-width: 576px) {

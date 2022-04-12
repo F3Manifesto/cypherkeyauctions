@@ -36,11 +36,10 @@ const NetworkAlert = () => {
         </Modal.Header>
         <Modal.Body>
           <p>
-            CC0 DAO auctions require you to switch over Ethereum or Polygon to be able to
-            participate.
+            The Cypher Key Auctions require you to connect to either Ethereum or Polygon Network to bid and collect.
           </p>
           <p>
-            <b>To get started, please switch your network by following the instructions below:</b>
+            <b>Switch your network by following the instructions below:</b>
           </p>
           <ol>
             <li>Open Metamask</li>

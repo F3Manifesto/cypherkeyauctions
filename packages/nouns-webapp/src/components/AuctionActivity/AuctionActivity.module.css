@@ -9,7 +9,7 @@
 }
 
 .ethModal .modal-content {
-  background-color: black !important;
+  background-color: #FFEF62 !important;
 }
 
 /* .polyModal .modal-content {
@@ -60,7 +60,7 @@ h4 {
   color: var(--brand-black);
   flex-grow: 1;
   margin: auto;
-  font-family: Armata;
+  font-family: New York;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
@@ -163,7 +163,7 @@ h4 {
 
 .fomoNounsLink a,
 .fomoNounsLink:active a {
-  font-family: 'PT Root UI', sans-serif;
+  font-family: 'Cypher';
   font-weight: 500;
   padding-left: 0.5rem;
   text-decoration: none;
