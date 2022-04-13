@@ -9,7 +9,7 @@ import { Spinner, InputGroup, FormControl, Button, Col, Form } from 'react-boots
 import { useAuctionMinBidIncPercentage } from '../../wrappers/nounsAuction';
 import { useAppDispatch } from '../../hooks';
 import { AlertModal, setAlertModal } from '../../state/slices/application';
-import { NounsAuctionHouseFactory } from '@digitalax/nouns-sdk';
+import { NounsAuctionHouseFactory } from '@digitalax/cypher-nouns-sdk';
 import { getCurrentConfig } from '../../config';
 import WalletConnectModal from '../WalletConnectModal';
 import SettleManuallyBtn from '../SettleManuallyBtn';
