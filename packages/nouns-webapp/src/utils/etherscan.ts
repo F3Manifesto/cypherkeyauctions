@@ -1,5 +1,5 @@
 import { ChainId } from '@usedapp/core';
-import { CHAIN_ID, ETHERSCAN_API_KEY } from '../config';
+import { CHAIN_ID, ETHERSCAN_API_KEY, MAINNET_CHAIN_ID } from '../config';
 
 const getBaseURL = (network: ChainId) => {
   switch (network) {
@@ -16,9 +16,9 @@ const getBaseURL = (network: ChainId) => {
 
 const BASE_URL = getBaseURL(CHAIN_ID);
 
-export const buildEtherscanTxLink = (txHash: string): string => {
+export const buildEtherscanTxLink = (txHash: string, isEthereum?: boolean): string => {
   const path = `tx/${txHash}`;
-  return new URL(path, BASE_URL).toString();
+  return new URL(path, getBaseURL(!isEthereum ? CHAIN_ID : MAINNET_CHAIN_ID)).toString();
 };
 
 export const buildEtherscanAddressLink = (address: string): string => {
