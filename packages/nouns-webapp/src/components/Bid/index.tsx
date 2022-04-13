@@ -406,7 +406,7 @@ const Bid: React.FC<{
             <FormControl
               className={classes.bidInput}
               style={{
-                backgroundColor: isEthereum ? 'rgba(30, 228, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)',
+                backgroundColor: isEthereum ? 'rgba(78, 74, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)',
                 color: isEthereum ? 'rgba(30, 228, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)',
               }}
               type="number"

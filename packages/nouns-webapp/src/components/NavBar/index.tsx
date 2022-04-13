@@ -19,7 +19,7 @@ import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import NavBarTreasury from '../NavBarTreasury';
 import NavWallet from '../NavWallet';
-import { black } from '../../utils/nounBgColors';
+import { black, primary } from '../../utils/nounBgColors';
 
 const NavBar = () => {
   const activeAccount = useAppSelector(state => state.account.activeAccount);
@@ -38,11 +38,14 @@ const NavBar = () => {
 
   return (
     <>
-      <Navbar expand="lg" style={{ backgroundColor: black }} className={classes.navBarCustom}>
+      <Navbar expand="lg" style={{ backgroundColor: primary }} className={classes.navBarCustom}>
         <Container fluid={'xxl'}>
           <div className={classes.brandAndTreasuryWrapper}>
             <Navbar.Brand as={Link} to="/">
-              <h1 className={classes.logo}> F3M </h1>
+              <h1 style={{ color: black }} className={classes.logo}>
+                {' '}
+                F3M{' '}
+              </h1>
             </Navbar.Brand>
           </div>
           <Navbar.Toggle className={classes.navBarToggle} aria-controls="basic-navbar-nav" />

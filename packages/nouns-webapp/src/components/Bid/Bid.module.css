@@ -7,7 +7,7 @@
 }
 
 .bidBtn {
-  font-family: 'PT Root UI';
+  font-family: 'Cypher';
   border-radius: 12px !important;
   margin-left: 0.6rem !important;
   margin-top: 3px;
@@ -16,7 +16,7 @@
   height: 3rem;
   color: white;
   border: transparent;
-  background-color: #4E4AFF;
+  background-color: #4e4aff;
   font-weight: bold;
   letter-spacing: normal;
   font-size: 19px;
@@ -24,23 +24,23 @@
 }
 
 .formCheck label {
-  font-family: Cypher;
+  font-family: 'Cypher';
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 19px;
   display: flex;
   margin: 0 !important;
-  color: #4E4AFF
+  color: #4e4aff;
 }
 
 .formCheck input:checked {
-  background-color: #4E4AFF
+  background-color: #4e4aff;
   /*border-color: #4E4AFF;*/
 }
 
 .polygonFormCheck label {
-  font-family: Armata;
+  font-family: 'Cypher';
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -147,7 +147,7 @@
   border: transparent;
   background-color: var(--brand-black);
   font-weight: bold;
-  font-family: 'New York';
+  font-family: 'Cypher';
   font-size: 18px;
   border-radius: 10px;
 }

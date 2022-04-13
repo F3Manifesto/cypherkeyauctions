@@ -35,16 +35,17 @@
 }
 
 .linkStyle {
-  font-family: Armata;
+  font-family: Cypher;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
   /* identical to box height */
 
-  text-decoration-line: underline;
+  text-decoration-line: none;
 
-  color: #ffffff;
+  color: #ffef62;
+  border: none;
 }
 
 .linkStyle:hover {
@@ -109,7 +110,7 @@
 .whiteInfo,
 .whiteWallet {
   background-color: transparent;
-  border: 1px solid white!important;
+  border: 1px solid white !important;
   color: rgb(95, 95, 95);
 }
 

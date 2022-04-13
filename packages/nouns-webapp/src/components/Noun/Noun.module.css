@@ -33,6 +33,11 @@
   background: transparent;
 }
 
+.zoomBtn img {
+  width: 40px;
+  height: 40px;
+}
+
 .ethereumBorder {
   /* border: 5px solid rgba(30, 228, 255, 0.56); */
 }
@@ -59,7 +64,7 @@
   display: flex;
   align-items: center;
 
-  color: #4E4AFF;
+  color: #4e4aff;
 }
 
 @media (max-width: 768px) {

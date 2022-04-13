@@ -10,7 +10,7 @@ const AuctionDescription: React.FC<{ isEthereum?: boolean; description: string }
     <div
       className={classes.wrapper}
       style={{
-        backgroundColor: isEthereum ? 'rgba(30, 228, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)',
+        backgroundColor: isEthereum ? 'rgba(78, 74, 255, 0.5)' : 'rgba(78, 74, 255, 0.5)',
       }}
       onClick={() => setShow(!show)}
     >

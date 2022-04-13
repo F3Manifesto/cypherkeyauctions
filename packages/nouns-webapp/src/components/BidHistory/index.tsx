@@ -48,7 +48,7 @@ const bidItem = (bid: Bid, index: number, classes: any, isEthereum?: boolean) =>
           </div>
           <div className={classes.linkSymbol}>
             <a href={txLink} target="_blank" rel="noreferrer">
-              <img src={link} width={24} alt="link symbol" />
+              <img src="/foreign.png" width={24} alt="link symbol" />
             </a>
           </div>
         </div>

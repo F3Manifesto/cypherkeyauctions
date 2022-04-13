@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import BlackClose from '../../assets/black-close.png';
 import BlueClose from '../../assets/blue-close.png';
 import React from 'react';
-import { black, primary } from '../../utils/nounBgColors';
+import { black, primary, white } from '../../utils/nounBgColors';
 
 export const Backdrop: React.FC<{ onDismiss: () => void }> = props => {
   return <div className={classes.backdrop} onClick={props.onDismiss} />;
@@ -18,7 +18,7 @@ const ModalOverlay: React.FC<{
 }> = props => {
   const { title, content, isEthereum, onDismiss, onSuccess } = props;
   return (
-    <div className={classes.modal} style={{ background: isEthereum ? black : primary }}>
+    <div className={classes.modal} style={{ background: isEthereum ? white : primary }}>
       <button className={classes.closeButton} onClick={onDismiss}>
         <img src={isEthereum ? BlueClose : BlackClose} alt="Button to close modal" />
       </button>
@@ -30,7 +30,7 @@ const ModalOverlay: React.FC<{
         <button
           type="button"
           className={classes.confirm}
-          style={{ background: isEthereum ? primary : black, color: isEthereum ? black : primary }}
+          style={{ background: isEthereum ? primary : black, color: isEthereum ? white : primary }}
           onClick={onSuccess}
         >
           {' '}
