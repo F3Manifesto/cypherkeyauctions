@@ -29,7 +29,7 @@ const minBidEth = (minBid: BigNumber, paymentOption: string): string => {
   if (minBid.isZero()) {
     if (paymentOption === 'ETH') return '0.1';
     else if (paymentOption === 'MONA') return '0.9';
-    else if (paymentOption === 'CC0') return '10';
+    else if (paymentOption === 'F3M') return '10';
   }
 
   const eth = Number(utils.formatEther(EthersBN.from(minBid.toString())));
@@ -222,7 +222,6 @@ const Bid: React.FC<{
     }
 
     const value = utils.parseEther(bidInputRef.current.value.toString());
-
     if (isEthereum) {
       if (paymentOption === 'MONA') {
         placeBid(value, auction.nounId);
@@ -407,7 +406,7 @@ const Bid: React.FC<{
               className={classes.bidInput}
               style={{
                 backgroundColor: isEthereum ? 'rgba(78, 74, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)',
-                color: isEthereum ? 'rgba(30, 228, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)',
+                color: isEthereum ? 'rgb(255, 239, 98)' : 'rgb(255, 239, 98)',
               }}
               type="number"
               min="0"

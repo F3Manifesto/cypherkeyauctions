@@ -39,46 +39,68 @@ const NavBar = () => {
   return (
     <>
       <Navbar expand="lg" style={{ backgroundColor: primary }} className={classes.navBarCustom}>
-        <Container fluid={'xxl'}>
-          <div className={classes.brandAndTreasuryWrapper}>
-            <Navbar.Brand as={Link} to="/">
-              <h1 style={{ color: black }} className={classes.logo}>
+        {/* <Container fluid={'xxl'}> */}
+        <div className={classes.brandAndTreasuryWrapper}>
+          <Navbar.Brand as={Link} to="/">
+            <h1 style={{ color: black }} className={classes.logo}>
               <img src="/logoBig.png" alt="logof3m" className={classes.logof3m} />
-              </h1>
-            </Navbar.Brand>
-          </div>
-          <Navbar.Toggle className={classes.navBarToggle} aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse className="justify-content-end">
-            <Nav.Link
-              target="_blank"
-              rel="noreferrer"
-              href="https://web3fashionmanifesto.f3manifesto.xyz/"
-              className={classes.nounsNavLink}
-            >
-              <NavBarButton
-                buttonText={'Web3 Fashion Manifesto'}
-                buttonStyle={NavBarButtonStyle.LINK}
-              />
-            </Nav.Link>
-            <Nav.Link
-              href={'https://market.f3manifesto.xyz/'}
-              className={classes.nounsNavLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <NavBarButton buttonText={'Market'} buttonStyle={NavBarButtonStyle.LINK} />
-            </Nav.Link>
-            <Nav.Link
-              href={'https://popup.f3manifesto.xyz/'}
-              className={classes.nounsNavLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <NavBarButton buttonText={'Pop Up'} buttonStyle={NavBarButtonStyle.LINK} />
-            </Nav.Link>
-            <NavWallet address={activeAccount || '0'} buttonStyle={nonWalletButtonStyle} />{' '}
-          </Navbar.Collapse>
-        </Container>
+            </h1>
+          </Navbar.Brand>
+        </div>
+        <Navbar.Toggle className={classes.navBarToggle} aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse className="justify-content-end">
+          <Nav.Link
+            target="_blank"
+            rel="noreferrer"
+            href="https://docs.f3manifesto.xyz/"
+            className={classes.nounsNavLink}
+          >
+            <NavBarButton buttonText={'DOCUMENTATION'} buttonStyle={NavBarButtonStyle.LINK} />
+          </Nav.Link>
+          <Nav.Link
+            target="_blank"
+            rel="noreferrer"
+            href="https://web3fashionmanifesto.f3manifesto.xyz/"
+            className={classes.nounsNavLink}
+          >
+            <NavBarButton
+              buttonText={'Web3 Fashion Manifesto'}
+              buttonStyle={NavBarButtonStyle.LINK}
+            />
+          </Nav.Link>
+          <Nav.Link
+            target="_blank"
+            rel="noreferrer"
+            href="https://mirror.xyz/f3manifesto.eth"
+            className={classes.nounsNavLink}
+          >
+            <NavBarButton buttonText={'Sub-thread weekly'} buttonStyle={NavBarButtonStyle.LINK} />
+          </Nav.Link>
+          <Nav.Link
+            href={'https://themanifest.f3manifesto.xyz/'}
+            className={classes.nounsNavLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <NavBarButton
+              buttonText={'The Manifest Gallery'}
+              buttonStyle={NavBarButtonStyle.LINK}
+            />
+          </Nav.Link>
+          <Nav.Link
+            href={'https://web3cc0openlibrary.f3manifesto.xyz/'}
+            className={classes.nounsNavLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <NavBarButton
+              buttonText={'Web3 CC0 Open Library'}
+              buttonStyle={NavBarButtonStyle.LINK}
+            />
+          </Nav.Link>
+          <NavWallet address={activeAccount || '0'} buttonStyle={nonWalletButtonStyle} />{' '}
+        </Navbar.Collapse>
+        {/* </Container> */}
       </Navbar>
     </>
   );

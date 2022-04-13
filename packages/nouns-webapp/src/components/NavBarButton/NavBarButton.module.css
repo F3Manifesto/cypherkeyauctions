@@ -36,15 +36,15 @@
 }
 
 .linkStyle {
-  font-family: New York;
+  font-family: 'Lemon Milk';
   -webkit-text-stroke-width: 0.5px;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 20px;
   /* identical to box height */
 
-  text-decoration-line: none;
+  text-decoration-line: underline;
 
   color: #ffef62;
   border: none;

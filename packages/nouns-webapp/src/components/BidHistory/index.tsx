@@ -13,7 +13,12 @@ import { useAppSelector } from '../../hooks';
 import { black, primary } from '../../utils/nounBgColors';
 
 const bidItem = (bid: Bid, index: number, classes: any, isEthereum?: boolean) => {
-  const bidAmount = <TruncatedAmount amount={new BigNumber(EthersBN.from(bid.value).toString())} />;
+  const bidAmount = (
+    <TruncatedAmount
+      isEthereum={isEthereum}
+      amount={new BigNumber(EthersBN.from(bid.value).toString())}
+    />
+  );
   const date = `${dayjs(bid.timestamp.toNumber() * 1000).format('MMM DD')} at ${dayjs(
     bid.timestamp.toNumber() * 1000,
   ).format('hh:mm a')}`;
