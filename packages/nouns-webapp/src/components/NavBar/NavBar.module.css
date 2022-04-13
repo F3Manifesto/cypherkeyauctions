@@ -18,6 +18,14 @@
   color: #4E4AFF;
 }
 
+.logof3m {
+  position: absolute;
+width: 78px;
+left: 22px;
+top: 20px;
+align-items: center;
+}
+
 .navBarBrand:hover {
   transform: scale(0.95);
 }

@@ -55,7 +55,7 @@ const app: Record<SupportedChains, AppConfig> = {
   [ChainId.Mainnet]: {
     jsonRpcUri: createNetworkHttpUrl('mainnet'),
     wsRpcUri: createNetworkWsUrl('mainnet'),
-    subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/digitalax/nouns-subgraph-mainnet',
+    subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/f3manifesto/cypher-key-auctions-mainnet',
     enableHistory: process.env.REACT_APP_ENABLE_HISTORY === 'true',
   },
   [ChainId.Hardhat]: {
@@ -73,7 +73,7 @@ const app: Record<SupportedChains, AppConfig> = {
   [ChainId.Polygon]: {
     jsonRpcUri: 'https://polygon-mainnet.g.alchemy.com/v2/l_-zZAI0v9EWjrG1dee494hg1XDh38A8',
     wsRpcUri: 'wss://polygon-mainnet.g.alchemy.com/v2/l_-zZAI0v9EWjrG1dee494hg1XDh38A8',
-    subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/digitalax/nouns-subgraph-matic',
+    subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/f3manifesto/cypher-key-auctions',
     enableHistory: true,
   },
 };

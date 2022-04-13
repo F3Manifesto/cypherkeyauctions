@@ -17,13 +17,12 @@ const Footer = () => {
 
           <div className={[styles.dFlex, styles.iconsLine].join(' ')}>
             <a href="https://www.tiktok.com/@f3manifesto" target="_blank" rel="noreferrer">
-              <img src="/mirror.png" alt="tiktok-icon" className={styles.tiktokIcon} />
+              <img src="/tiktok-icon.png" alt="tiktok-icon" className={styles.tiktokIcon} />
             </a>
             <a
               href="https://www.youtube.com/channel/UC5SOYiDrdooqNusoS5vrJAw"
               target="_blank"
-              rel="noreferrer"
-            >
+              rel="noreferrer">
               <img src="/youtube-icon.png" alt="youtube-icon" className={styles.youtubeIcon} />
             </a>
             <a href="https://f3manifesto.medium.com/" target="_blank" rel="noreferrer">

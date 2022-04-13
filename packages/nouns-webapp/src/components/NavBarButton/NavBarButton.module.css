@@ -8,6 +8,7 @@
   transition: all 0.125s ease-in-out;
   box-shadow: none !important;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  align-items: center;
 }
 
 .button {
@@ -35,7 +36,8 @@
 }
 
 .linkStyle {
-  font-family: Cypher;
+  font-family: New York;
+  -webkit-text-stroke-width: 0.5px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

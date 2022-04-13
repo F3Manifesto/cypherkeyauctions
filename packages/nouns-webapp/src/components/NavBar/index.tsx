@@ -28,7 +28,7 @@ const NavBar = () => {
 
   const useStateBg =
     // history.location.pathname === '/' ||
-    history.location.pathname.includes('/cc0/') || history.location.pathname.includes('/auction/');
+    history.location.pathname.includes('/f3m/') || history.location.pathname.includes('/auction/');
 
   const nonWalletButtonStyle = !useStateBg
     ? NavBarButtonStyle.WHITE_INFO
@@ -43,8 +43,7 @@ const NavBar = () => {
           <div className={classes.brandAndTreasuryWrapper}>
             <Navbar.Brand as={Link} to="/">
               <h1 style={{ color: black }} className={classes.logo}>
-                {' '}
-                F3M{' '}
+              <img src="/logoBig.png" alt="logof3m" className={classes.logof3m} />
               </h1>
             </Navbar.Brand>
           </div>
@@ -53,29 +52,29 @@ const NavBar = () => {
             <Nav.Link
               target="_blank"
               rel="noreferrer"
-              href="https://docs.cc0dao.xyz/"
+              href="https://web3fashionmanifesto.f3manifesto.xyz/"
               className={classes.nounsNavLink}
             >
               <NavBarButton
-                buttonText={'Read the Documentation'}
+                buttonText={'Web3 Fashion Manifesto'}
                 buttonStyle={NavBarButtonStyle.LINK}
               />
             </Nav.Link>
             <Nav.Link
-              href={'https://refactory.cc0dao.xyz/'}
+              href={'https://market.f3manifesto.xyz/'}
               className={classes.nounsNavLink}
               target="_blank"
               rel="noreferrer"
             >
-              <NavBarButton buttonText={'Contribute CC0'} buttonStyle={NavBarButtonStyle.LINK} />
+              <NavBarButton buttonText={'Market'} buttonStyle={NavBarButtonStyle.LINK} />
             </Nav.Link>
             <Nav.Link
-              href={'https://docs.cc0dao.xyz/join-the-dao'}
+              href={'https://popup.f3manifesto.xyz/'}
               className={classes.nounsNavLink}
               target="_blank"
               rel="noreferrer"
             >
-              <NavBarButton buttonText={'Join the DAO'} buttonStyle={NavBarButtonStyle.LINK} />
+              <NavBarButton buttonText={'Pop Up'} buttonStyle={NavBarButtonStyle.LINK} />
             </Nav.Link>
             <NavWallet address={activeAccount || '0'} buttonStyle={nonWalletButtonStyle} />{' '}
           </Navbar.Collapse>
