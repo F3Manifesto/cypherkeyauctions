@@ -1,5 +1,5 @@
 import { ImageData as data, getNounData } from '@digitalax/nouns-assets';
-import { buildSVG } from '@digitalax/nouns-sdk';
+import { buildSVG } from '@digitalax/cypher-nouns-sdk';
 import { BigNumber as EthersBN } from 'ethers';
 import { INounSeed, useNounSeed } from '../../wrappers/nounToken';
 import Noun from '../Noun';

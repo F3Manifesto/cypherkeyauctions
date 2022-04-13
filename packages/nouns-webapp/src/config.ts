@@ -1,7 +1,7 @@
 import {
   ContractAddresses as NounsContractAddresses,
   getContractAddressesForChainOrThrow,
-} from '@digitalax/nouns-sdk';
+} from '@digitalax/cypher-nouns-sdk';
 import { ChainId } from '@usedapp/core';
 import { BigNumber } from 'ethers';
 
@@ -55,7 +55,8 @@ const app: Record<SupportedChains, AppConfig> = {
   [ChainId.Mainnet]: {
     jsonRpcUri: createNetworkHttpUrl('mainnet'),
     wsRpcUri: createNetworkWsUrl('mainnet'),
-    subgraphApiUri: 'https://api.thegraph.com/subgraphs/name/f3manifesto/cypher-key-auctions-mainnet',
+    subgraphApiUri:
+      'https://api.thegraph.com/subgraphs/name/f3manifesto/cypher-key-auctions-mainnet',
     enableHistory: process.env.REACT_APP_ENABLE_HISTORY === 'true',
   },
   [ChainId.Hardhat]: {

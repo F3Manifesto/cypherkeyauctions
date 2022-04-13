@@ -1,6 +1,6 @@
 import { useContractCall } from '@usedapp/core';
 import { BigNumber as EthersBN, utils } from 'ethers';
-import { NounsAuctionHouseABI, NounsAuctionHouseFactory } from '@digitalax/nouns-sdk';
+import { NounsAuctionHouseABI, NounsAuctionHouseFactory } from '@digitalax/cypher-nouns-sdk';
 import config, { getCurrentConfig } from '../config';
 import BigNumber from 'bignumber.js';
 import { isNounderNoun } from '../utils/nounderNoun';

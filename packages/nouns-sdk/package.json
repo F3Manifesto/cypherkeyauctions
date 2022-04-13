@@ -1,6 +1,6 @@
 {
-  "name": "@digitalax/nouns-sdk",
-  "version": "0.1.3",
+  "name": "@digitalax/cypher-nouns-sdk",
+  "version": "0.1.0",
   "description": "Useful tooling for interacting with the Nouns protocol",
   "author": "haruto-digi",
   "homepage": "https://nouns.wtf",
