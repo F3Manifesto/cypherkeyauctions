@@ -151,6 +151,7 @@ export const latestAuctionsQuery = () => gql`
         id
         amount
         blockNumber
+        isERC20
         blockTimestamp
         txIndex
         bidder {

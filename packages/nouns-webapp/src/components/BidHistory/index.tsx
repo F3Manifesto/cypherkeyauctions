@@ -17,6 +17,7 @@ const bidItem = (bid: Bid, index: number, classes: any, isEthereum?: boolean) =>
     <TruncatedAmount
       isEthereum={isEthereum}
       amount={new BigNumber(EthersBN.from(bid.value).toString())}
+      useErc20={bid.useErc20}
     />
   );
   const date = `${dayjs(bid.timestamp.toNumber() * 1000).format('MMM DD')} at ${dayjs(

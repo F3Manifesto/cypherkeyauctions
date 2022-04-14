@@ -7,6 +7,7 @@ export interface BidEvent {
   extended: boolean;
   transactionHash: string;
   timestamp: BigNumberish;
+  useErc20: boolean;
 }
 
 export interface AuctionCreateEvent {
@@ -34,4 +35,5 @@ export interface Bid {
   extended: boolean;
   transactionHash: string;
   timestamp: BigNumber;
+  useErc20: boolean;
 }

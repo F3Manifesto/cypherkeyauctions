@@ -51,6 +51,7 @@ export const reduxSafeBid = (bid: BidEvent): BidEvent => ({
   extended: bid.extended,
   transactionHash: bid.transactionHash,
   timestamp: bid.timestamp,
+  useErc20: bid.useErc20,
 });
 
 const maxBid = (bids: BidEvent[]): BidEvent => {

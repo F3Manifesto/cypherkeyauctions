@@ -28,6 +28,7 @@ const deserializeBid = (reduxSafeBid: BidEvent): Bid => {
     extended: reduxSafeBid.extended,
     transactionHash: reduxSafeBid.transactionHash,
     timestamp: BigNumber.from(reduxSafeBid.timestamp),
+    useErc20: reduxSafeBid.useErc20,
   };
 };
 const deserializeBids = (reduxSafeBids: BidEvent[]): Bid[] => {

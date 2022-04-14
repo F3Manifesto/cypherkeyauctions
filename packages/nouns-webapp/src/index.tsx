@@ -138,8 +138,6 @@ const ChainSubscriber: React.FC = () => {
     skip: !currentAuction?.nounId.toNumber(),
   });
 
-  console.log({ currentConfig });
-
   const fetchPrices = async () => {
     const eth = await fetch(`${EXCHANGE_API}/simple/price?ids=ethereum&vs_currencies=usd`).then(
       res => res.json(),
@@ -149,8 +147,6 @@ const ChainSubscriber: React.FC = () => {
     );
     dispatch(setPrices({ eth: eth.ethereum.usd, mona: mona.monavale.usd }));
   };
-
-  console.log({ data });
 
   useEffect(() => {
     if (data && data.auction && currentAuction && !isSwitching) {
@@ -226,12 +222,15 @@ const ChainSubscriber: React.FC = () => {
       value: BigNumberish,
       extended: boolean,
       event: any,
+      useErc20: boolean,
     ) => {
       const timestamp = (await event.getBlock()).timestamp;
       const transactionHash = event.transactionHash;
       // if (nounId.toString() === cAuction.nounId.toString()) {
       dispatch(
-        appendBid(reduxSafeBid({ nounId, sender, value, extended, transactionHash, timestamp })),
+        appendBid(
+          reduxSafeBid({ nounId, sender, value, extended, transactionHash, timestamp, useErc20 }),
+        ),
       );
       // }
     };
@@ -265,19 +264,27 @@ const ChainSubscriber: React.FC = () => {
       0 - currentConfig.blocksPerDay,
     );
 
-    for (let event of [...previousBids, ...previousERC20Bids]) {
+    for (let event of previousBids) {
       if (event.args === undefined) {
         dispatch(setIsSwitching(false));
         return;
       }
-      processBidFilter(...(event.args as [BigNumber, string, BigNumber, boolean]), event);
+      processBidFilter(...(event.args as [BigNumber, string, BigNumber, boolean]), event, false);
+    }
+
+    for (let event of previousERC20Bids) {
+      if (event.args === undefined) {
+        dispatch(setIsSwitching(false));
+        return;
+      }
+      processBidFilter(...(event.args as [BigNumber, string, BigNumber, boolean]), event, true);
     }
 
     nounsAuctionHouseContract.on(bidFilter, (nounId, sender, value, extended, event) =>
-      processBidFilter(nounId, sender, value, extended, event),
+      processBidFilter(nounId, sender, value, extended, event, false),
     );
     nounsAuctionHouseContract.on(bidERC20Filter, (nounId, sender, value, extended, event) =>
-      processBidFilter(nounId, sender, value, extended, event),
+      processBidFilter(nounId, sender, value, extended, event, true),
     );
     nounsAuctionHouseContract.on(createdFilter, (nounId, startTime, endTime) =>
       processAuctionCreated(nounId, startTime, endTime),
