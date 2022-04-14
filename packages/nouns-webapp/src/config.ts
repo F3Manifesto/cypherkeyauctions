@@ -127,7 +127,7 @@ export const isMainnet = (chainId: string = '1') => {
   return BigNumber.from(chainId).toNumber() === MAINNET_CHAIN_ID;
 };
 
-export const getCurrentConfig = (chainId: string = '137') => {
+export const getCurrentConfig = (chainId: string = '1') => {
   if (BigNumber.from(chainId).toNumber() === CHAIN_ID) return config;
   return mainnetConfig;
 };

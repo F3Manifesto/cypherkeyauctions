@@ -1,6 +1,6 @@
 import classes from './Modal.module.css';
 import ReactDOM from 'react-dom';
-import BlackClose from '../../assets/black-close.png';
+import YellowClose from '../../assets/yellow-close.png';
 import BlueClose from '../../assets/blue-close.png';
 import React from 'react';
 import { black, primary, white } from '../../utils/nounBgColors';
@@ -20,7 +20,7 @@ const ModalOverlay: React.FC<{
   return (
     <div className={classes.modal} style={{ background: isEthereum ? white : primary }}>
       <button className={classes.closeButton} onClick={onDismiss}>
-        <img src={isEthereum ? BlueClose : BlackClose} alt="Button to close modal" />
+        <img src={isEthereum ? BlueClose : YellowClose} alt="Button to close modal" />
       </button>
       <h3 style={{ color: isEthereum ? primary : black }}>{title}</h3>
       <div className={classes.content} style={{ color: isEthereum ? primary : black }}>

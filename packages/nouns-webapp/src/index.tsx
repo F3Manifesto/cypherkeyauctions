@@ -1,4 +1,4 @@
-import React, { ReactNode, useCallback, useMemo, useState } from 'react';
+import React, { ReactNode, useCallback, useMemo, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -103,7 +103,7 @@ export type AppDispatch = typeof store.dispatch;
 
 // prettier-ignore
 const useDappConfig = {
-  readOnlyChainId: MAINNET_CHAIN_ID,
+  readOnlyChainId: CHAIN_ID,
   readOnlyUrls: {
     [ChainId.Rinkeby]: createNetworkHttpUrl('rinkeby'),
     [ChainId.Mainnet]: createNetworkHttpUrl('mainnet'),
@@ -128,10 +128,12 @@ const ChainSubscriber: React.FC = () => {
   const currentConfig = getCurrentConfig(reduxChainId?.toString());
   const wsProvider = new WebSocketProvider(currentConfig.app.wsRpcUri);
   const isSwitching = useAppSelector(state => state.application.isSwitching);
+  const configRef = useRef<any | undefined>(currentConfig);
   const nounsAuctionHouseContract = NounsAuctionHouseFactory.connect(
     currentConfig.addresses.nounsAuctionHouseProxy,
     wsProvider,
   );
+
   const walletConnecting = useAppSelector(state => state.application.walletConnecting);
   const [currentAuction, setCurrentAuction] = useState<Auction | undefined>();
   const { data } = useQuery(auctionQuery(currentAuction?.nounId.toNumber() ?? 0), {
@@ -183,9 +185,13 @@ const ChainSubscriber: React.FC = () => {
   }, [data, currentAuction, isSwitching]);
 
   useEffect(() => {
-    loadState();
+    // loadState();
     fetchPrices();
   }, []);
+
+  useEffect(() => {
+    configRef.current = currentConfig;
+  }, [currentConfig]);
 
   useEffect(() => {
     dispatch(clearBids());
@@ -264,6 +270,9 @@ const ChainSubscriber: React.FC = () => {
       0 - currentConfig.blocksPerDay,
     );
 
+    if (nounsAuctionHouseContract.address !== configRef.current.addresses.nounsAuctionHouseProxy)
+      return;
+
     for (let event of previousBids) {
       if (event.args === undefined) {
         dispatch(setIsSwitching(false));
@@ -298,7 +307,9 @@ const ChainSubscriber: React.FC = () => {
     dispatch(setIsSwitching(false));
   };
 
-  useMemo(() => loadState(), [reduxChainId]);
+  useEffect(() => {
+    loadState();
+  }, [reduxChainId]);
 
   return <></>;
 };

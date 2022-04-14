@@ -26,7 +26,7 @@ import { useAppSelector } from '../../hooks';
 import { black, primary } from '../../utils/nounBgColors';
 import AuctionDescription from '../AuctionDescription';
 import BlueClose from '../../assets/blue-close.png';
-import BlackClose from '../../assets/black-close.png';
+import BlackClose from '../../assets/yellow-close.png';
 
 const openEtherscanBidHistory = (currentConfig: any) => {
   const url = buildEtherscanAddressLink(currentConfig.addresses.nounsAuctionHouseProxy);
