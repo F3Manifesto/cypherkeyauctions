@@ -88,12 +88,25 @@ const Auction: React.FC<AuctionProps> = props => {
   return (
     <div style={{ backgroundColor: isEthereum ? black : primary }} className={classes.wrapper}>
       <Container fluid="xxl">
-        {!!title && (
-          <h1 className={classes.title} style={{ color: isEthereum ? primary : black }}>
-            {' '}
-            {title}{' '}
-          </h1>
-        )}
+        <div className={classes.topWrapper}>
+          {!!title && (
+            <h1 className={classes.title} style={{ color: isEthereum ? primary : black }}>
+              {' '}
+              {title}{' '}
+            </h1>
+          )}
+          <a
+            href="https://cypherkey.f3manifesto.xyz/"
+            target="_blank"
+            className={classes.followStory}
+            style={{
+              backgroundColor: isEthereum ? primary : black,
+              color: isEthereum ? black : primary,
+            }}
+          >
+            Follow the Story
+          </a>
+        </div>
         <Row>
           <Col lg={{ span: 6 }} className={classes.nounContentCol}>
             {currentAuction ? nounContent : loadingNoun}
