@@ -132,7 +132,7 @@ const AuctionActivity: React.FC<AuctionActivityProps> = (props: AuctionActivityP
             <Col lg={12}>
               <AuctionActivityNounTitle
                 isEthereum={isEthereum}
-                name={auction.name}
+                name={auction.nounId.toNumber() === 26 ? 'Caught' : auction.name}
                 nounId={auction.nounId}
               />
             </Col>
