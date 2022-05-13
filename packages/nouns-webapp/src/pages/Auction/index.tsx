@@ -52,7 +52,6 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
     if (onDisplayAuction) {
       if (onDisplayAuction.tokenUri) {
         fetchFromIpfs(onDisplayAuction.tokenUri || '').then(res => {
-          console.log({ res });
           setRealAuction({
             ...onDisplayAuction,
             name: res.name,

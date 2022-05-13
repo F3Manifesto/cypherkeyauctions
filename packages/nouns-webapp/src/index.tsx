@@ -155,8 +155,17 @@ const ChainSubscriber: React.FC = () => {
       dispatch(setFullAuction(reduxSafeAuction(currentAuction)));
       dispatch(setLastAuctionNounId(currentAuction.nounId.toNumber()));
       if (data.auction.anticipatedNoun.tokenUri) {
-        if (!data.auction.anticipatedNoun.name) {
-          fetchFromIpfs(data.auction.anticipatedNoun.tokenUri).then(res => {
+        if (
+          !data.auction.anticipatedNoun.name ||
+          !data.auctioin.anticipatedNoun.animation ||
+          !data.auctioin.anticipatedNoun.description ||
+          !data.auctioin.anticipatedNoun.image
+        ) {
+          fetchFromIpfs(
+            currentAuction.nounId.toNumber() === 26
+              ? 'https://f3manifesto.mypinata.cloud/ipfs/QmRBp6swKiz6emaNBndAMYiZ6Qx5o3Hk6J7yccht43U1G7'
+              : data.auction.anticipatedNoun.tokenUri,
+          ).then(res => {
             dispatch(
               setFullAuction({
                 ...currentAuction,
