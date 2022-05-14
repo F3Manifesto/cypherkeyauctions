@@ -154,12 +154,13 @@ const ChainSubscriber: React.FC = () => {
     if (data && data.auction && currentAuction && !isSwitching) {
       dispatch(setFullAuction(reduxSafeAuction(currentAuction)));
       dispatch(setLastAuctionNounId(currentAuction.nounId.toNumber()));
-      if (data.auction.anticipatedNoun.tokenUri) {
+      console.log({ data });
+      if (data.auction?.anticipatedNoun.tokenUri) {
         if (
-          !data.auction.anticipatedNoun.name ||
-          !data.auctioin.anticipatedNoun.animation ||
-          !data.auctioin.anticipatedNoun.description ||
-          !data.auctioin.anticipatedNoun.image
+          !data.auction?.anticipatedNoun?.name ||
+          !data.auctioin?.anticipatedNoun?.animation ||
+          !data.auctioin?.anticipatedNoun?.description ||
+          !data.auctioin?.anticipatedNoun?.image
         ) {
           fetchFromIpfs(
             currentAuction.nounId.toNumber() === 26
@@ -230,6 +231,7 @@ const ChainSubscriber: React.FC = () => {
     const createdFilter = nounsAuctionHouseContract.filters.AuctionCreated(null, null, null, null);
     const settledFilter = nounsAuctionHouseContract.filters.AuctionSettled(null, null, null);
     const cAuction = await nounsAuctionHouseContract.auction();
+    console.log({ cAuction });
     setCurrentAuction(cAuction);
     const processBidFilter = async (
       nounId: BigNumberish,
