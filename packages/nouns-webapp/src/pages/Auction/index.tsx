@@ -50,8 +50,13 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
 
   useEffect(() => {
     if (onDisplayAuction) {
-      if (onDisplayAuction.tokenUri) {
-        fetchFromIpfs(onDisplayAuction.tokenUri || '').then(res => {
+      if (onDisplayAuction.tokenUri || onDisplayAuction.nounId.toNumber() === 34) {
+        fetchFromIpfs(
+          onDisplayAuction.nounId.toNumber() === 34
+            ? 'https://f3manifesto.mypinata.cloud/ipfs/QmWazKB2aXpSa18U8hZZ9bcwctqzRBa7vWarQzxzzBvUxz'
+            : onDisplayAuction.tokenUri || '',
+        ).then(res => {
+          console.log({ res });
           setRealAuction({
             ...onDisplayAuction,
             name: res.name,
@@ -115,7 +120,7 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
         </div>
       ) : (
         <Auction
-          auction={onDisplayAuction?.name ? onDisplayAuction : realAuction}
+          auction={realAuction?.name ? realAuction : onDisplayAuction}
           isEthereum={isEthereum}
           title={title}
         />
